@@ -12,7 +12,7 @@ class Mlearningsiswa extends Model{
     ];
 
     public function mlearningkelas(){
-        return $this->belongsTo(Mlearningkelas::class, 'kelas_mlearning_id');
+        return $this->belongsTo(Mlearningkelas::class, 'kelas_mlearning_id')->orderBy('created_at', 'desc');
     }
 
     public function user(){

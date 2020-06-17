@@ -45,7 +45,7 @@ class User extends Authenticatable
     }
 
     public function mlearningsiswa(){
-        return $this->hasMany(Mlearningsiswa::class, 'siswa_id');
+        return $this->hasMany(Mlearningsiswa::class, 'siswa_id')->orderBy('created_at', 'desc');
     }
 
     public function mlearningmateri(){

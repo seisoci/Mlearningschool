@@ -24,9 +24,10 @@ Route::get('/kelas/listkelas', 'API\KelasController@kelas');
 
 Route::middleware('auth:api')->group( function (){
     Route::resource('kelas', 'API\KelasController');
+    Route::resource('komentar', 'API\KomentarController');
     Route::get('/user/kelas', 'API\UserController@kelas');
     Route::get('/materi/{id}', 'API\MateriController@materi');
-
+    
 });
 
 
